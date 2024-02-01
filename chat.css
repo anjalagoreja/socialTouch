@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* display: flex; */
+    height: 100vh; /* Make sure the body takes up the full viewport height */
+    background-color: #E7E6F7;
+}
+
+.chat {
+    display: flex;
+    flex: 1; /* Make the chat container take up the remaining space */
+}
+
+:root {
+    --primary-colour-hue: 252;
+    --dark-colour-lightness: 17%;
+    --light-colour-lightness: 95%;
+    --white-colour-lightness: 100%;
+    --colour-white: hsl(252, 30%, var(--white-colour-lightness));
+    --colour-light: #E7E6F7;
+    --colour-gray: hsl(var(--primary-colour-hue), 15%, 65%);
+    --colour-primary: purple;
+    --color-pri: hsl(210, 71%, 56%);
+    --colour-secondary: #d6ccff;
+    --colour-success: #51fb51;
+    --colour-danger: #fb5151;
+    --colour-dark: hsl(252, 30%, var(--dark-colour-lightness));
+    --colour-black: #151221;
+    --colour-logo-dark: #121212;
+  
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 1rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+  
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+  }
+  /* Global */
+  body {
+    font-family: "Poppins", sans-serif;
+    color: var(--colour-dark);
+    background: var(--colour-light);
+    overflow-x: hidden;
+  }
+  /* Navbar */
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .profile-picture {
+    width: 2.7rem;
+    /* aspect-ratio: 1/1; */
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+  nav {
+    width: 100%;
+    background: var(--colour-secondary);
+    padding: 0.7rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .search-bar {
+    background: white;
+    border-radius: 2rem;
+    padding: 10px;
+  }
+  .search-bar input[type="search"] {
+    background: transparent;
+    width: 30vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--colour-dark);
+    border: none;
+  }
+  .search-bar input[type="search"]::placeholder {
+    color: var(--colour-gray);
+    font-family: "Poppins", sans-serif;
+  }
+  nav .create {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  @media screen and (max-width: 992px) {
+    nav .search-bar {
+        display: none;
+    }
+}
+
+.sidebar {
+    width: 80px;
+    padding-top: 50px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile {
+    width: 50px; /* Adjust the size of the profile image */
+    height: 50px; /* Adjust the size of the profile image */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.sidebar ul li {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+    padding: 20px;
+}
+.setting-btn{
+    display: flex;
+    align-items: end;
+    flex: 1;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: black;
+}
+.messages {
+    /* flex: 1; Make the messages div take up the remaining space */
+    background-color: white; /* Add a background color to the messages area */
+    display: flex;
+    flex-direction: column; /* Display messages in a column */
+    width: 400px; /* Adjust the width as needed */
+}
+
+.message-header {
+    display: flex;
+    margin-bottom: 10px; /* Add margin between header and message containers */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.message-header p{
+    margin: 70px 50px 50px 30px;
+}
+
+.message-container {
+    display: flex;
+    margin-left: 30px;
+    margin-top: 10px; /* Adjust the margin between message containers */
+    background-color: rgba(211, 211, 211, 0.553);
+    width: 300px; /* Adjust the width as needed */
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.message-profile {
+    width: 40px; /* Adjust the size of the message profile image */
+    height: 40px; /* Adjust the size of the message profile image */
+    border-radius: 50%;
+    margin-right: 10px; /* Adjust the margin between profile image and content */
+}
+
+.message-content {
+    flex: 1; /* Make the message content take up the remaining space */
+}
+
+.message-name {
+    font-weight: bold;
+    margin-bottom: 5px; /* Adjust the margin between name and message content */
+}
+
+.chats {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Display chats in a column */
+}
+
+.chat-container {
+    margin-left: 30px;
+    border-radius: 50px;
+    margin-top: 50px;
+    background-color: white;
+    margin-right: 30px;
+
+}
+
+.content{
+    display: flex;
+}
+
+.received_content{
+    display: flex;
+    flex-direction: row;
+}
+
+.text{
+    border-radius: 20px 20px 20px 0px;
+    padding: 20px;
+    background-color: rgba(0, 0, 255, 0.495);
+    color: white;
+    margin: 0;
+}
+
+.time{
+    margin: 5px;
+    color: lightslategray;
+}
+
+.message-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px; /* Adjust as needed */
+  }
+  
+  .message-name {
+    font-weight: bold;
+    margin-right: 10px; /* Adjust as needed */
+  }
+  
+  .time_messages {
+    color: lightslategray;
+  }
+  
+
+.content_opposite{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.text_opposite{
+    border-radius: 20px 20px 0px 20px;
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.299);
+    margin: 0;
+}
+
+.time_opposite{
+    margin: 5px;
+    color: lightslategray;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+.text_area {
+    margin-top: 20px; /* Adjust the margin as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff; /* Set the background color */
+    border-radius: 25px; /* Adjust the border-radius as needed */
+  }
+  
+  .chat-input {
+    flex: 1; /* Take up remaining space */
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 20px; /* Match the design */
+    margin-right: 10px; /* Adjust margin */
+    font-size: 14px; /* Adjust font size */
+    color: var(--colour-dark); /* Match text color */
+    background-color: rgba(128, 128, 128, 0.299);
+  }
+  
+  /* Styling for the send button or any other action button */
+  .send-button {
+    padding: 10px 20px;
+    background-color: var(--colour-primary);
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .send-button:hover {
+    background-color: var(--color-pri); /* Change to your hover color */
+  }
+
+  .icons-container {
+    display: flex;
+    flex-direction: row-reverse; /* Aligns the icons to the extreme right */
+    align-items: center; /* Aligns icons vertically centered */
+    gap: 5px; /* Adjust spacing between icons */
+  }
+
+  /* .person-details {
+    display: flex;
+    align-items: center;
+  } */
+
+  .person-details {
+    margin: 50px;
+    display: flex;
+}
+  
+  .name-and-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .icons-container {
+    display: flex;
+    gap: 10px; /* Adjust spacing between icons */
+  }
+  

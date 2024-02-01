@@ -1,0 +1,27 @@
+.d-flex{
+    display: flex;
+}
+body{
+    font-family: 'Marcellus', serif;
+
+}
+.btn{
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #8D91F4;
+    border: 0px;
+    
+}
+.btnicon{
+    
+    height: 40px; 
+    width: 40px; 
+    border-radius:100px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+/*  */
+
